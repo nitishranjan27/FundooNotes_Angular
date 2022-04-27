@@ -6,18 +6,23 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
+import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    ForgotpasswordComponent,
+    ResetpasswordComponent
+
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ import { LoginComponent } from './components/login/login.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
