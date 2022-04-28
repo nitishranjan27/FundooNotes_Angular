@@ -2,7 +2,15 @@
 <div class="form-content">
   <div class="form">
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"> 
-    <div class="form-head1">FundooNotes</div>
+    <!-- <div class="form-head1">FundooNotes</div> -->
+    <h1 class="form-head1">
+        <span class="f">F</span>
+        <span class="u">u</span>
+        <span class="n">n</span>
+        <span class="d">d</span>
+        <span class="o1">o</span>
+        <span class="o2">o</span>
+    </h1>
     <div class="form-head">Create your FundooNotes Account</div>
     <div class="row">
       <p>
@@ -25,7 +33,7 @@
       <p>
         <mat-form-field class="form-cd-rm1" appearance="outline">
           <mat-label>UserName</mat-label>
-          <input matInput placeholder="UserName" formControlName="username">
+          <input matInput placeholder="UserName" formControlName="email">
           <mat-hint>You'll need to confirm that this email belongs to you. </mat-hint>
           <mat-error>enter your email</mat-error>
         </mat-form-field>
@@ -70,7 +78,7 @@
 
   <div class="img-ad">
     <img src="/assets/image2.svg" alt="" width="244" height="244" class="" fxHide.xs>
-    <p>One account. All of Fundoo working for you.</p>
+    <p fxHide.xs>One account. All of Fundoo working for you.</p>
 </div>
 </div>
 </div>
