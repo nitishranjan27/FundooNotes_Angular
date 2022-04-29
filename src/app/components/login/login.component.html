@@ -1,5 +1,5 @@
 <div class="group-form">
-    <div class="form-content">
+    <div class="form-content" fxLayout="row" fxLayout.xs="column">
        <div class="form">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
              
@@ -18,7 +18,7 @@
             <p>
               <mat-form-field class="form-cd-rm" appearance="outline">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" formControlName="username">
+                <input matInput placeholder="Email" formControlName="email">
                 <mat-error>enter your email</mat-error>
               </mat-form-field>
             </p>
@@ -31,7 +31,7 @@
             </p>
           </div>
           <div class="message1">
-            <p routerLink="/forgot">Forgot Password? </p>
+            <a routerLink="/forgot">Forgot Password? </a>
           </div>
           <div class="message">
             <p> your computer? Use Guest mode to sign in privately.</p>
