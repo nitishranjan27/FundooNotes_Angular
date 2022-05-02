@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-
+import {MatCardModule} from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TakenoteComponent } from './components/takenote/takenote.component';
+import { GetallnoteComponent } from './components/getallnote/getallnote.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TakenoteComponent } from './components/takenote/takenote.component';
     ForgotpasswordComponent,
     ResetpasswordComponent,
     DashboardComponent,
-    TakenoteComponent
+    TakenoteComponent,
+    GetallnoteComponent
 
   ],
   imports: [
@@ -47,7 +49,8 @@ import { TakenoteComponent } from './components/takenote/takenote.component';
     HttpClientModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

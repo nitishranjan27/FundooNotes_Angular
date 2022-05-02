@@ -1,1 +1,21 @@
-<p>takenote works!</p>
+<mat-card class="mt-card" #takenote ngClass.lt-md="matcard_wrraper-lt-md">
+    <div class="title-pin" *ngIf="notelist">
+      <mat-card-title><input matInput placeholder="title" ></mat-card-title>
+      
+    </div>
+  
+    <div (click)="noteClick()" class="takenotefield">
+      <input required matInput placeholder="Take a note" >
+      <div class="formhead" *ngIf="!notelist">
+        <img class="searchimage" src="../../../assets/images/check_box_black_24dp.svg">
+        <img class="searchimage" src="../../../assets/images/brush_black_24dp.svg">
+        <img class="searchimage" src="../../../assets/images/image_black_24dp.svg">
+      </div>
+    </div>
+    <div *ngIf="notelist">
+      <div  class="takenote-icons" fxLayout="row" fxLayoutAlign="space-between">
+        
+        <button class="cls-btn" mat-button (click)="noteClose()">close</button>
+      </div>
+    </div>      
+  </mat-card>
