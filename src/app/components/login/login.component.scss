@@ -42,8 +42,8 @@
     padding-right: 20%;
 }
 .form {
-    width: 500px;
-    height: 500px;
+    // width: 50%;
+    // height: 500px;
     margin-bottom: 50px;
     padding: 44px 60px;
     background: #ffffff 0% 0% no-repeat padding-box;   
@@ -103,3 +103,14 @@
     }
 }
 
+@media (max-width:500px) {
+    .form{
+        margin-left: 100px;
+        
+    }
+    .form-content{
+        border: none;
+        box-shadow: none;
+        // padding: 20px;
+        }
+}

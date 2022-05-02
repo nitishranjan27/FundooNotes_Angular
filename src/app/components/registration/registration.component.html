@@ -1,7 +1,7 @@
 <div class="group-form">
 <div class="form-content" fxLayout="row" fxLayout.xs="column">
-  <div class="form" >
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"> 
+  <!-- <div class="form"> -->
+    <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()"> 
     <!-- <div class="form-head1">FundooNotes</div> -->
     <h1 class="form-head1">
         <span class="f">F</span>
@@ -12,7 +12,7 @@
         <span class="o2">o</span>
     </h1>
     <div class="form-head">Create your FundooNotes Account</div>
-    <div class="row">
+    <div class="row" fxLayout.xs="column">
       <p>
         <mat-form-field class="form-cd-rm" appearance="outline">
           <mat-label>First Name</mat-label>
@@ -29,7 +29,7 @@
       </p>
     </div>
 
-    <div class="username">
+    <div class="username" fxLayout.xs="column">
       <p>
         <mat-form-field class="form-cd-rm1" appearance="outline">
           <mat-label>UserName</mat-label>
@@ -42,7 +42,7 @@
     <div class="message1">
       <p>Use my current email address instead </p>
     </div>
-    <div class="row">
+    <div class="row" fxLayout.xs="column">
       <p>
         <mat-form-field class="form-cd-rm" appearance="outline">
           <mat-label>Password</mat-label>
@@ -74,11 +74,11 @@
       <button mat-raised-button>Next</button>
     </div>
   </form>
-  </div>
+  <!-- </div> -->
 
-  <div class="img-ad">
-    <img src="/assets/image2.svg" alt="" width="244" height="244" class="" fxHide.xs>
-    <p fxHide.xs>One account. All of Fundoo working for you.</p>
+  <div class="img-ad" fxHide.xs>
+    <img src="/assets/image2.svg" alt="" width="244" height="244" class="" >
+    <p>One account. All of Fundoo working for you.</p>
 </div>
 </div>
 </div>
