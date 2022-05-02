@@ -1,10 +1,10 @@
 <div class="group-form">
     <div class="form-content" fxLayout="row" fxLayout.xs="column">
-       <div class="form">
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+       <!-- <div class="form"> -->
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
              
         <!-- <div class="form-head1">FundooNotes</div> -->
-        <h1 class="form-head1">
+        <h1 class="form-head1" fxLayoutAlign="center">
             <span class="f">F</span>
             <span class="u">u</span>
             <span class="n">n</span>
@@ -12,8 +12,8 @@
             <span class="o1">o</span>
             <span class="o2">o</span>
         </h1>
-        <div class="form-head">Sign in</div>
-        <h3 class="form-head2">Use your FundooNote Account</h3>
+        <div class="form-head" fxLayoutAlign="center">Sign in</div>
+        <h3 class="form-head2" fxLayoutAlign="center">Use your FundooNote Account</h3>
         <div class="row">
             <p>
               <mat-form-field class="form-cd-rm" appearance="outline">
@@ -43,6 +43,6 @@
             <button mat-raised-button>Next</button>
           </div>
         </form>
-       </div>
+       <!-- </div> -->
     </div>
 </div>       

@@ -1,1 +1,66 @@
-<div class="example-container"></div>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <div class="keep-icon">
+      <button mat-icon-button (click)="snav.toggle()">
+        <mat-icon class="menu-icon">menu</mat-icon>
+      </button>
+      <img src="../../../assets/images/th.jfif"  height="45px" width="60px">
+      <h1 class="example-app-name">Fundoo</h1>
+    </div>
+
+    <div class="search-box">
+      <img src="../../../assets/images/search_black_24dp.svg" />
+      <input matInput placeholder="search" />
+    </div>
+
+    <!-- <div fxLayout="row">
+      <img mat-button class="searching" src="../../../assets/images/search_black_24dp.svg" />
+      <input fxHide.xs="true" fxHide.sm="true" fxHide.md="true" type="text" placeholder="Search"
+           class="search-box">
+  </div> -->
+
+    <div class="right-icons">
+      <img src="../../../assets/images/refresh_black_24dp.svg" />
+      <img src="../../../assets/images/dns_black_24dp.svg" />
+      <img src="../../../assets/images/settings_black_24dp.svg" />
+    </div>
+    <div class="menu">
+      <img src="../../../assets/images/apps_black_24dp.svg" />
+      <img src="../../../assets/images/profile-png.png" />
+    </div> 
+  </mat-toolbar>
+
+  <mat-sidenav-container
+    class="example-sidenav-container"
+    [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+  >
+    <mat-sidenav
+      #snav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+    >
+      <mat-nav-list class="nav-list">
+        <a mat-list-item routerLink="notes"
+          ><img src="../../../assets/images/lightbulb_black_24dp.svg" />notes</a
+        >
+        <a mat-list-item routerLink="."
+          ><img src="../../../assets/images/notifications_black_24dp.svg" />reminder</a
+        >
+        <a mat-list-item routerLink="."
+          ><img src="../../../assets/images/edit_black_24dp.svg" />label</a
+        >
+        <a mat-list-item routerLink="archive"
+          ><img src="../../../assets/images/archive_black_24dp.svg" />archive</a
+        >
+        <a mat-list-item routerLink="trash"
+          ><img src="../../../assets/images/delete_black_24dp.svg" />trash</a
+        >
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content-container">
+     <p><router-outlet></router-outlet></p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

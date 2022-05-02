@@ -33,6 +33,7 @@
     box-shadow: 0px 3px 6px #00000029;
     margin-bottom: 35px;
     margin-top: 40px;
+    // padding: 20px;
 }
 .group-form{
     display: flex;
@@ -45,11 +46,10 @@
   }
 .form {
     width: 60%;
-    height: 500px;
+    // height: 500px;
     margin-bottom: 50px;
     padding: 44px 60px;
     background: #ffffff 0% 0% no-repeat padding-box;
-    
     opacity: 1;
 }
 
@@ -124,6 +124,19 @@
         left: -20%;
     }
 }
-// .a:hover{
-//     background-color: aquamarine;
-// }
+
+@media (max-width:450px) {
+    .form-content{
+    border: none;
+    box-shadow: none;
+    // padding: 20px;
+    }
+    .form-cd-rm1{
+        width: 200px;   
+    }
+    .form {
+        
+       padding: 0px 60px;
+        
+    }
+}
