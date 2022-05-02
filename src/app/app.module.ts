@@ -21,6 +21,7 @@ import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassw
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TakenoteComponent } from './components/takenote/takenote.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginComponent,
     ForgotpasswordComponent,
     ResetpasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    TakenoteComponent
 
   ],
   imports: [
