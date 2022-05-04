@@ -1,4 +1,4 @@
-<mat-card class="mt-card" #takenote ngClass.lt-md="matcard_wrraper-lt-md">
+<mat-card class="mt-card" #takenote >
     <div class="title-pin" *ngIf="notelist">
       <mat-card-title><input matInput placeholder="title" ></mat-card-title>
       
@@ -6,7 +6,7 @@
   
     <div (click)="noteClick()" class="takenotefield">
       <input required matInput placeholder="Take a note" >
-      <div class="formhead" *ngIf="!notelist">
+      <div *ngIf="!notelist">
         <img class="searchimage" src="../../../assets/images/check_box_black_24dp.svg">
         <img class="searchimage" src="../../../assets/images/brush_black_24dp.svg">
         <img class="searchimage" src="../../../assets/images/image_black_24dp.svg">

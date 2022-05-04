@@ -15,7 +15,8 @@ const routes: Routes = [
    {path:'reset',component: ResetpasswordComponent },
    {path:'dashboard',component:DashboardComponent,
    children:[
-    {path:'takenote',component:TakenoteComponent},
+    // {path:'takenote',component:TakenoteComponent},
+    {path:'', redirectTo:"/dashboard/notes", pathMatch:'full' },
     {path:'notes',component:GetallnoteComponent}
    ]}
 ];

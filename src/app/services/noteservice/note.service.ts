@@ -6,14 +6,17 @@ import { HttpService } from '../httpService/http.service';
   providedIn: 'root'
 })
 export class NoteService {
-
-  constructor(private httpService:HttpService) { }
-
+token:any;
+  constructor(private httpService:HttpService) { 
+    this.token= localStorage.getItem('token')
+  }
+   
   getallnotes(){
 
    let header ={
      headers: new HttpHeaders({
-       'Content-type': 'application/json'
+       'Content-type': 'application/json',
+       'Authorization': 'Bearer '+this.token 
      })
    }
    return this.httpService.getService('Notes/GetAll',true,header)
