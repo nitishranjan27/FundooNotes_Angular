@@ -1,50 +1,60 @@
 .mt-card{
-     position: absolute;
-        padding: 11pt;
-        border-radius: 15px;
-        width: 40%;
-        margin-left: -100px;
-        margin-top: 20px;
-        left: 30%;
-}
-.matcard_wrraper{
-    width: 700px;
-    /* margin-bottom: -22px; */
-    margin-left: 426px;
-    margin-top: 83px;
-}
-    .matcard_wrraper-lt-md{
-        width: 300px;
-        /* margin-bottom: -22px; */
-        margin-left: 150px;
-        margin-top: 20px;
- }
- 
- .searchimage{
-    padding: 5px;
-    margin-right: 10px; 
-    
- }
-.cls-btn{
-    text-align: end ;
-}
- input{
-    background-color: transparent;
-    border: none;
-    outline-style: none;
-    line-height: 30px;
- }
- .title-pin{
-     width: fit-content;
-     display: flex;justify-content: space-between;
-
- }
- .takenotefield{
-    display: flex;
-    justify-content: space-between;
-     
- }
-
- .takenote-icons{
+    padding: 11pt;
+    border-radius: 15px;
+    width: 40%;
+    margin-left: -100px;
     margin-top: 20px;
+    left: 30%;
+}
+// .matcard_wrraper{
+//     width: 700px;
+//     /* margin-bottom: -22px; */
+//     margin-left: 426px;
+//     margin-top: 83px;
+// }
+.matcard_wrraper-lt-md{
+    width: 300px;
+    /* margin-bottom: -22px; */
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+.searchimage{
+padding: 5px;
+margin-right: 10px; 
+
+}
+.cls-btn{
+text-align: end ;
+}
+input{
+background-color: transparent;
+border: none;
+outline-style: none;
+line-height: 30px;
+}
+.title-pin{
+ width: fit-content;
+ display: flex;justify-content: space-between;
+
+}
+.takenotefield{
+display: flex;
+justify-content: space-between;
+ 
+}
+
+.takenote-icons{
+margin-top: 20px;
+}
+.abc{
+   width: 60%;
+}
+.xyz{
+   width: 40%;
+}
+@media (max-width:870px) {
+    .mt-card{
+        width: 350px;
+    }
 }

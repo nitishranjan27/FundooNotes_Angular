@@ -7,6 +7,7 @@ import { NoteService } from 'src/app/services/noteservice/note.service';
   styleUrls: ['./getallnote.component.scss']
 })
 export class GetallnoteComponent implements OnInit {
+  notelist:any=[];
 
   constructor(private note:NoteService) { }
 
@@ -16,7 +17,18 @@ export class GetallnoteComponent implements OnInit {
   getallnotes(){
     this.note.getallnotes().subscribe((res:any)=> {
       console.log(res);
+      this.notelist=res.data;
+      this.notelist.reverse();
+      console.log(this.notelist);
     })
+  }
+  receiveEvent(eventGetAll: any) {
+    console.log(eventGetAll);
+    this.notelist.reverse();
+    this.notelist.push(eventGetAll.data); 
+    this.notelist.reverse();
+    console.log(this.notelist);
+    // this.getallnotes();
   }
 
 }

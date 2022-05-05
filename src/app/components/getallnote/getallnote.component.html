@@ -1,1 +1,2 @@
-<app-takenote></app-takenote>
+<app-takenote (createToGetAllNotes)="receiveEvent($event)"></app-takenote>
+<app-displaynotes [childMessage]="notelist" ></app-displaynotes>
