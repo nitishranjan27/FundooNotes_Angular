@@ -6,7 +6,6 @@ import { HttpService } from '../httpService/http.service';
   providedIn: 'root'
 })
 export class UserService {
-
   constructor(private httpService:HttpService) { }
 
   Registration(reqdata:any){
@@ -38,11 +37,11 @@ export class UserService {
     let header = {
       headers:new HttpHeaders({
         'Content-type':'application/json',
-        'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJuaXRpc2hya3JhbmphbkBnbWFpbC5jb20iLCJJZCI6IjEiLCJleHAiOjE2NTEyMzYyODR9.5_HzfQyTdTXwidzejIYkEWxODCIDyu5BkqAHajBxFy8'
+        'Authorization': 'Bearer '+token 
         
       })
     }
-    return this.httpService.postService("User/ResetPassword",reqdata,true,header)
+    return this.httpService.putService("User/ResetPassword",reqdata,true,header)
   }
 }
 

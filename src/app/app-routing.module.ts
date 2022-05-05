@@ -6,13 +6,14 @@ import { GetallnoteComponent } from './components/getallnote/getallnote.componen
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
-import { TakenoteComponent } from './components/takenote/takenote.component';
+// import { TakenoteComponent } from './components/takenote/takenote.component';
 
 const routes: Routes = [
    {path:'registration', component: RegistrationComponent },
    {path:'login',component: LoginComponent },
    {path:'forgot',component: ForgotpasswordComponent },
-   {path:'reset',component: ResetpasswordComponent },
+   {path:'reset/:token',component: ResetpasswordComponent },
+   {path:'', redirectTo:"/login", pathMatch:'full' },
    {path:'dashboard',component:DashboardComponent,
    children:[
     // {path:'takenote',component:TakenoteComponent},

@@ -1,0 +1,23 @@
+.card{
+    width: 244px;
+    border: 1px solid gainsboro ;
+    min-height: 100px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.icons{
+    height: 42%;
+    width: 100%;
+    margin-top: 23%;
+    margin-left: -1%;
+    // visibility:hidden
+}
+// .card:hover .icons{
+//     visibility: visible;
+// }
+// .pin{
+//     visibility: hidden;
+// }
+// .card:hover .pin{
+//     visibility: visible;
+// }

@@ -18,8 +18,8 @@ export class ResetpasswordComponent implements OnInit {
   ngOnInit(): void {
     this.resetForm = this.formBuilder.group({
       password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmpassword: ['', [Validators.required, Validators.minLength(6)]],
-    })
+      confirmPassword: ['', [Validators.required, Validators.minLength(6)]],
+    });
     this.token = this.activeRoute.snapshot.paramMap.get('token');
   }
   onSubmit() {
@@ -30,10 +30,11 @@ export class ResetpasswordComponent implements OnInit {
       console.log("invalid data");
     }
     else{
-      console.log("Password Reset Successfully");
+      console.log("inside");
+      console.log(this.resetForm.value);
       let reqData={
         password:this.resetForm.value.password,
-        confirmPassword:this.resetForm.value.confirmpassword
+        confirmPassword:this.resetForm.value.confirmPassword
       }
       this.user.reset(reqData,this.token).subscribe((response:any)=> {
         console.log(response);

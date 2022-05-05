@@ -13,6 +13,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -23,6 +25,9 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TakenoteComponent } from './components/takenote/takenote.component';
 import { GetallnoteComponent } from './components/getallnote/getallnote.component';
+import { IconsComponent } from './components/icons/icons.component';
+import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
+import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { GetallnoteComponent } from './components/getallnote/getallnote.componen
     ResetpasswordComponent,
     DashboardComponent,
     TakenoteComponent,
-    GetallnoteComponent
+    GetallnoteComponent,
+    IconsComponent,
+    DisplaynotesComponent,
+    UpdatenoteComponent
 
   ],
   imports: [
@@ -50,7 +58,9 @@ import { GetallnoteComponent } from './components/getallnote/getallnote.componen
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

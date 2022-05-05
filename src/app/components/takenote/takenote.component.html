@@ -1,21 +1,21 @@
-<mat-card class="mt-card" #takenote >
-    <div class="title-pin" *ngIf="notelist">
-      <mat-card-title><input matInput placeholder="title" ></mat-card-title>
-      
+<mat-card class="mt-card">
+  <div class="title-pin" *ngIf="notelist">
+    <mat-card-title><input matInput placeholder="title" [(ngModel)]="title" ></mat-card-title>
+    
+  </div>
+
+  <div (click)="noteClick()" class="takenotefield">
+    <input required matInput class="abc" placeholder="Take a note" [(ngModel)]="body">
+    <div *ngIf="!notelist" clas="xyz" >
+      <img class="searchimage" src="../../../assets/images/check_box_black_24dp.svg">
+      <img class="searchimage" src="../../../assets/images/brush_black_24dp.svg">
+      <img class="searchimage" src="../../../assets/images/image_black_24dp.svg">
     </div>
-  
-    <div (click)="noteClick()" class="takenotefield">
-      <input required matInput placeholder="Take a note" >
-      <div *ngIf="!notelist">
-        <img class="searchimage" src="../../../assets/images/check_box_black_24dp.svg">
-        <img class="searchimage" src="../../../assets/images/brush_black_24dp.svg">
-        <img class="searchimage" src="../../../assets/images/image_black_24dp.svg">
-      </div>
+  </div>
+  <div *ngIf="notelist">
+    <div  class="takenote-icons" fxLayout="row" fxLayoutAlign="space-between">
+      <app-icons> </app-icons>
+      <button class="cls-btn" mat-button (click)="noteClose()">close</button>
     </div>
-    <div *ngIf="notelist">
-      <div  class="takenote-icons" fxLayout="row" fxLayoutAlign="space-between">
-        
-        <button class="cls-btn" mat-button (click)="noteClose()">close</button>
-      </div>
-    </div>      
-  </mat-card>
+  </div>      
+</mat-card>
