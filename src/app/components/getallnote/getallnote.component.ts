@@ -30,5 +30,9 @@ export class GetallnoteComponent implements OnInit {
     console.log(this.notelist);
     // this.getallnotes();
   }
+  updatedData(value: any) {
+
+    this.getallnotes();
+  }
 
 }
