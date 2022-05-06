@@ -15,6 +15,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -41,7 +42,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     GetallnoteComponent,
     IconsComponent,
     DisplaynotesComponent,
-    UpdatenoteComponent
+    UpdatenoteComponent,
 
   ],
   imports: [
@@ -60,7 +61,8 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     MatListModule,
     MatCardModule,
     MatMenuModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

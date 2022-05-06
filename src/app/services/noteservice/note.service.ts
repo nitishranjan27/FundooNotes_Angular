@@ -32,5 +32,14 @@ token:any;
    return this.httpService.getService('Notes/GetAll',true,header)
 
   }
+  updatenote(data:any,id:any){
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization': `Bearer  ${this.token}`
+      })
+  }
+  return this.httpService.putService("Notes/Update?NoteId="+ 10020, data, true, header)
+}
 
 }
