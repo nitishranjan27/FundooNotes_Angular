@@ -16,6 +16,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AuthenticationGuard } from './authentication.guard';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -29,6 +30,8 @@ import { GetallnoteComponent } from './components/getallnote/getallnote.componen
 import { IconsComponent } from './components/icons/icons.component';
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { ArchiveComponent } from './components/archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,8 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     IconsComponent,
     DisplaynotesComponent,
     UpdatenoteComponent,
+    TrashComponent,
+    ArchiveComponent,
 
   ],
   imports: [
@@ -64,7 +69,9 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     FormsModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+    AuthenticationGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -39,7 +39,28 @@ token:any;
         'Authorization': `Bearer  ${this.token}`
       })
   }
-  return this.httpService.putService("Notes/Update?NoteId="+ 10020, data, true, header)
+  return this.httpService.putService("Notes/Update?NoteId="+ id, data, true, header)
+}
+trashnotes(id:any){
+
+let header ={
+  headers: new HttpHeaders({
+    'Content-type': 'application/json',
+      'Authorization':`Bearer  ${this.token}`
+  })
+}
+return this.httpService.putService("Notes/IsTrash?NotesId="+id,{},true,header)
+}
+archiveNotes(id:any){
+
+  let headersOption = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      'Authorization': `Bearer  ${this.token}`		
+    })
+
+  }
+  return this.httpService.putService("Notes/IsArchive?NoteId="+id,{},true,headersOption)
 }
 
 }

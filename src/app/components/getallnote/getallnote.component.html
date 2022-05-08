@@ -1,2 +1,2 @@
 <app-takenote (createToGetAllNotes)="receiveEvent($event)"></app-takenote>
-<app-displaynotes [childMessage]="notelist" (noteUpdated)="updatedData($event)"></app-displaynotes>
+<app-displaynotes [childMessage]="notelist" (noteUpdated)="updatedData($event)" (displaytogetallnotes)="receiveMessagefromdisplaycard($event)"></app-displaynotes>

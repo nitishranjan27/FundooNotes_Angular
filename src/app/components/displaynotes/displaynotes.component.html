@@ -9,7 +9,7 @@
                 {{note.body}}
             </mat-card-subtitle>
             <div class="icons">
-                <app-icons></app-icons>
+                <app-icons [noteObject]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)"></app-icons>
             </div>
         </mat-card>
     </div>
