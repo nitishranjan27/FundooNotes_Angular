@@ -25,5 +25,10 @@ export class HttpService {
     // console.log("print values",reqdata);
     
     return this.httpclient.put(this.baseUrl+url,reqdata,token && httpOptions)
-  } 
+  }
+  deleteService(url : string, token : boolean=true, httpOptions : any ){
+    // console.log("print values",reqdata);
+    
+    return this.httpclient.delete(this.baseUrl+url, token && httpOptions)
+  }
 }

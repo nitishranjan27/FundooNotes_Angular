@@ -18,7 +18,7 @@ export class UpdatenoteComponent implements OnInit {
       console.log(data);
       this.Title = data.title
       this.Body = data.body
-      this.NoteId = data.NoteId }
+      this.NoteId = data.noteId }
 
   ngOnInit(): void {
   }

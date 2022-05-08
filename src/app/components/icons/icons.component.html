@@ -9,11 +9,11 @@
     <img class="search_image" style="margin-right: 10px;
       height: 20px;" src="../../../assets/images/image_black_24dp.svg">
     <img class="search_image" style="margin-right: 10px;
-      height: 20px;" src="../../../assets/images/archive_black_24dp.svg">
+      height: 20px;" src="../../../assets/images/archive_black_24dp.svg" (click)="onArchive()">
     <img class="search_image" style="margin-right: 10px;
       height: 20px;" src="../../../assets/images/more_vert_black_24dp.svg" [matMenuTriggerFor]="more">
     <mat-menu #more="matMenu">
-      <button mat-menu-item>Delete note</button>
+      <button mat-menu-item (click)="onDelete()">Delete note</button>
     </mat-menu>
   
   </div>
