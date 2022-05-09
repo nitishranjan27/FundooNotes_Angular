@@ -17,9 +17,9 @@ export class TakenoteComponent implements OnInit {
 
   title: string = ""
   body: string = ""
-  isDeleted: boolean = true
-  isPinned: boolean = true
-  isArchived: boolean = true
+  isDeleted: boolean = false
+  isPinned: boolean = false
+  isArchived: boolean = false
   color: string = "red"
   bgImage: string = "image1.jpg"
   reminder: string = "2022-05-04T17:17:25.717Z"
