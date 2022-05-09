@@ -18,9 +18,9 @@ export class TrashComponent implements OnInit {
   getTrashList(){
     this.noteService.getallnotes().subscribe((res: any) => {
       console.log(res);
-       this.trashList=res
-       this.trashList = res.filter((object: any) => {
-        return object.isTrash === true;
+      //  this.trashList=res
+       this.trashList = res.data.filter((object: any) => {
+        return object.isDeleted === true;
       })
      
     })

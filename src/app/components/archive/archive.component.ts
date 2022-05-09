@@ -21,8 +21,8 @@ export class ArchiveComponent implements OnInit {
     this.noteService.getallnotes().subscribe((res: any) => {
       console.log(res);
        this.archiveList=res
-       this.archiveList = res.filter((object: any) => {
-        return object.isArchive === true;
+       this.archiveList = res.data.filter((object: any) => {
+        return object.isArchived === true;
       })
      
     })

@@ -24,7 +24,8 @@ export class DisplaynotesComponent implements OnInit {
      });
      dialogRef.afterClosed().subscribe(result => {
      console.log('The dialog was closed'); 
-      this.noteUpdated.emit(result);
+     this.recievefromiconstodisplaycard(result)
+      // this.noteUpdated.emit(result);
      });
   }
   recievefromiconstodisplaycard($event: any) {

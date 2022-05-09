@@ -19,6 +19,10 @@ export class GetallnoteComponent implements OnInit {
       console.log(res);
       this.notelist=res.data;
       this.notelist.reverse();
+      this.notelist = this.notelist.filter((object: any) => {
+        return object.isArchived === false && object.isDeleted === false;
+      
+    })
       console.log(this.notelist);
     })
   }

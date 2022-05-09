@@ -33,10 +33,10 @@ export class UpdatenoteComponent implements OnInit {
       console.log(res);
       this.Title = ''
       this.Body = ''
-      this.noteUpdated.emit(res);
-       
+      // this.noteUpdated.emit(res);
+      this.dialogRef.close() 
     })
-    this.dialogRef.close()
+    
   }
 
 }

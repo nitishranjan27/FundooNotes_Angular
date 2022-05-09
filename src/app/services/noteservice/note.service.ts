@@ -62,5 +62,15 @@ archiveNotes(id:any){
   }
   return this.httpService.putService("Notes/IsArchive?NoteId="+id,{},true,headersOption)
 }
+ColorNote(id:any, data:any){
 
+  let headersOption = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      'Authorization': `Bearer  ${this.token}`		
+    })
+
+  }
+  return this.httpService.putService("Notes/Color?NoteId="+id,data,true,headersOption)
+}
 }
