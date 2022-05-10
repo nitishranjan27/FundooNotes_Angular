@@ -38,7 +38,9 @@ export class IconsComponent implements OnInit {
     
   }
   setColor(Color:any){
-    this.noteId=[this.noteObject.notesId]
+    console.log(Color)
+    this.noteObject.color=Color
+    this.noteId=this.noteObject.noteId
     let data = {
       color : Color
     }

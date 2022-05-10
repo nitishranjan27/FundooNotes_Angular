@@ -20,7 +20,7 @@ export class TakenoteComponent implements OnInit {
   isDeleted: boolean = false
   isPinned: boolean = false
   isArchived: boolean = false
-  color: string = "red"
+  color: string = ""
   bgImage: string = "image1.jpg"
   reminder: string = "2022-05-04T17:17:25.717Z"
   createdAt: string = "2022-05-04T17:17:25.717Z"
@@ -57,6 +57,8 @@ export class TakenoteComponent implements OnInit {
       }
       this.noteService.createnote(data).subscribe((res: any) => {
         console.log(res);
+        this.title=""
+        this.body=""
         this.createToGetAllNotes.emit(res);
       })
     
