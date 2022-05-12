@@ -1,11 +1,11 @@
-<div class="icongroup">
+<div style="margin-top: -32px;">
 
     <img class="search_image" style="margin-right: 10px;
-      height: 20px;" src="../../../assets/images/add_alert_black_24dp.svg">
+      height: 25px;" src="../../../assets/images/add_alert_black_24dp.svg">
     <img class="search_image" style="margin-right: 10px;
-      height: 20px;" src="../../../assets/images/person_add_alt_black_24dp.svg">
+      height: 25px;" src="../../../assets/images/person_add_alt_black_24dp.svg">
     <img class="search_image" style="margin-right: 10px;
-      height: 20px;" src="../../../assets/images/palette_black_24dp.svg" [matMenuTriggerFor]="aboveMenu">
+      height: 25px;" src="../../../assets/images/palette_black_24dp.svg" [matMenuTriggerFor]="aboveMenu">
        <mat-menu #aboveMenu="matMenu" yPosition="below">
         <div>
           <div *ngFor='let color of colorarray'>
@@ -15,12 +15,24 @@
           </div>
         </div>
       </mat-menu>
+
+
+      <button style="background: url('../../../assets/images/image_black_24dp.svg') no-repeat ;border: none;height: 50px;" >      <!-- style="background: url('/assets/Note-icons/image.svg') no-repeat ;" -->
+        <!-- <img src="/assets/Note-icons/image.svg" width="20px" height="20px">   -->
+        <input type='file'  (change)="onFileSelected($event)" style="width: 20px;opacity: 0;border: none;"> 
+    </button>
+
+      <!-- <button style="background: url('../../../assets/images/image_black_24dp.svg') no-repeat center;" >
+     
     <img class="search_image" style="margin-right: 10px;
       height: 20px;" src="../../../assets/images/image_black_24dp.svg">
+         <input type="file" class="imagemodi" (change)="onFileSelected($event)" >
+        </button> -->
+
     <img class="search_image" style="margin-right: 10px;
-      height: 20px;" src="../../../assets/images/archive_black_24dp.svg" (click)="onArchive()">
-    <img class="search_image" style="margin-right: 10px;
-      height: 20px;" src="../../../assets/images/more_vert_black_24dp.svg" [matMenuTriggerFor]="more">
+      height: 25px;" src="../../../assets/images/archive_black_24dp.svg" (click)="onArchive()">
+    <img class="search_image" style="margin-right: 4px;
+      height: 25px;" src="../../../assets/images/more_vert_black_24dp.svg" [matMenuTriggerFor]="more">
     <mat-menu #more="matMenu">
       <button mat-menu-item (click)="onDelete()">Delete note</button>
     </mat-menu>

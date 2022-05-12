@@ -17,6 +17,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AuthenticationGuard } from './authentication.guard';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -67,7 +68,8 @@ import { ArchiveComponent } from './components/archive/archive.component';
     MatCardModule,
     MatMenuModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    ImageCropperModule
   ],
   providers: [
     AuthenticationGuard
