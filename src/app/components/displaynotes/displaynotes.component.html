@@ -8,6 +8,7 @@
             <mat-card-subtitle (click)="openDialog(note)">
                 {{note.body}}
             </mat-card-subtitle>
+            <img [src]="note.bgImage" style="width: 100%;"> <br/>
             <div class="icons">
                 <app-icons [noteObject]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)"></app-icons>
             </div>

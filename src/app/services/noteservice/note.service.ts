@@ -72,8 +72,15 @@ console.log(id,data.color)
 
   }
   return this.httpService.putService("Notes/Color",{noteId:id,addcolor:data.color},true,headersOption)
-  // `Notes/ChangeColor?newColor=${newColor}&?noteId=${id}`
 
-  // `Notes/Color?NoteId=${id}&addcolor=${data.color}`
+}
+UploadPicture(image:any,id:any){
+  let headersOption = {
+    headers: new HttpHeaders({
+      // 'Content-type': 'application/json',
+      'Authorization': `Bearer  ${this.token}`		
+    })
+  }
+  return this.httpService.putService("Notes/UpdateImage/"+id,image,true,headersOption)
 }
 }

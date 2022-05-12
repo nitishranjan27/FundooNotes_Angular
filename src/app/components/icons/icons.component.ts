@@ -9,6 +9,8 @@ import { NoteService } from 'src/app/services/noteservice/note.service';
 export class IconsComponent implements OnInit {
   noteId: any
   color:any
+  SelectedFile = null;
+  url = '';
   @Input() noteObject:any
   @Output() iconstodisplay = new EventEmitter<string>();
   colorarray = ['#fff', '#f28b82', '#fbbc04', '#fff475', '#ccff90', '#a7ffeb', '#cbf0f8', '#aecbfa'];
@@ -19,7 +21,7 @@ export class IconsComponent implements OnInit {
   }
   onDelete(){
     console.log('Moved to Trash');
-    this.noteId=[this.noteObject.noteId]
+    this.noteId=[this.noteObject.noteId]  
     this.note.trashnotes(this.noteId).subscribe((res:any) => {
       console.log(res);
       this.iconstodisplay.emit(res)
@@ -50,5 +52,23 @@ export class IconsComponent implements OnInit {
 
   })
 }
+
+onFileSelected(event:any){
+    console.log(event);
+    this.SelectedFile = event.target.files[0];
+    if (event.target.files && event.target.files[0]){
+      this.onUpload(this.SelectedFile)
+    }
+}
+onUpload(file:any){
+  console.log(file);
+      const imagefile = new FormData();
+      imagefile.append('imageURL',file)
+
+     this.note.UploadPicture(imagefile, this.noteObject.noteId).subscribe((response: any) => {
+       console.log("Image Uploaded",response)
+      this.iconstodisplay.emit(response)
+     })
+    }
 
 }
