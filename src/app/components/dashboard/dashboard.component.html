@@ -10,7 +10,7 @@
 
     <div class="search-box">
       <img src="../../../assets/images/search_black_24dp.svg" />
-      <input matInput placeholder="search" />
+      <input matInput placeholder="search" (keyup)="search($event)"/>
     </div>
 
     <!-- <div fxLayout="row">

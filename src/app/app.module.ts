@@ -33,6 +33,7 @@ import { DisplaynotesComponent } from './components/displaynotes/displaynotes.co
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchiveComponent } from './components/archive/archive.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ArchiveComponent } from './components/archive/archive.component';
     UpdatenoteComponent,
     TrashComponent,
     ArchiveComponent,
+    FilterPipe,
 
   ],
   imports: [
