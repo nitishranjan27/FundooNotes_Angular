@@ -1,0 +1,29 @@
+<div>
+    <div>
+        <span class="text-Title" >Collaborators</span>
+    </div>
+    
+    <mat-divider></mat-divider>
+    <div class="row" >
+        <div  fxLayoutAlign="start start" >
+            <img src="../../../assets/images/profile-png.png" height="30px" width="20px" >
+            <div  fxLayout="column" fxLayoutAlign="start start" style="margin-left: 23px;">
+                <span><b>{{firstName}} {{lastName}}</b>(Owner)</span>
+                <span>{{OwnerEmail}}</span>
+            </div>            
+        </div>
+    </div>
+    <div >
+        <div class="row" >
+            <img src="../../../assets/images/collab.svg"  matTooltip="Collabrator "> 
+            <input email required matInput class="inp-text"  type="email" placeholder="Email to share with" name="email" [(ngModel)]="email">
+            
+        </div>
+    </div>
+    <div class="container" >
+        <div >
+            <button mat-raised-button class="example-button-row container-fluid"  (click)="close()" style="margin-right: 20px;">Cancel</button>
+            <button mat-raised-button class="example-button-row container-fluid"  (click)="addCollab()" type="submit">Save</button>
+        </div>
+    </div>
+</div>

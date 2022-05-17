@@ -34,6 +34,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { CollaborationComponent } from './components/collaboration/collaboration.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     TrashComponent,
     ArchiveComponent,
     FilterPipe,
+    CollaborationComponent,
 
   ],
   imports: [

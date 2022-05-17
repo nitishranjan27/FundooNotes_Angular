@@ -3,7 +3,7 @@
         <mat-card class="card" [style.background]="note.color">
             <mat-card-title fxLayout="row" fxLayoutAlign="space-between">
                 <div (click)="openDialog(note)">{{note.title}}</div>
-                <div><img class="pin" src="../../../assets/images/push_pin_black_24dp.svg"></div>
+                <div><img class="pin" src="../../../assets/images/push_pin_black_24dp.svg" (click)="onPinned(note);"></div>
             </mat-card-title>
             <mat-card-subtitle (click)="openDialog(note)">
                 {{note.body}}

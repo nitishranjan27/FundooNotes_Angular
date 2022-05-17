@@ -7,7 +7,7 @@ export class FilterPipe implements PipeTransform {
 
   transform(value: any, searchNote: string){
     console.log(searchNote)
-    if (value.length === 0 || searchNote === ''){
+    if (searchNote === ''){
       return value;
     }
     const Message = [];
