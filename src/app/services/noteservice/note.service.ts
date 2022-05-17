@@ -62,6 +62,15 @@ archiveNotes(id:any){
   }
   return this.httpService.putService("Notes/IsArchive?NoteId="+id,{},true,headersOption)
 }
+notePinned(id:any){
+  let headersOption = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      'Authorization': `Bearer  ${this.token}`	
+    })
+  }
+   return this.httpService.putService("Notes/IsPinned?NoteId="+id,{},true,headersOption)
+}
 ColorNote(id:any, data:any){
 console.log(id,data.color)
   let headersOption = {
@@ -82,5 +91,14 @@ UploadPicture(image:any,id:any){
     })
   }
   return this.httpService.putService("Notes/UpdateImage/"+id,image,true,headersOption)
+}
+DeletePicture(id:any){
+  let headersOption = {
+    headers: new HttpHeaders({
+       'Content-type': 'application/json',
+       'Authorization': `Bearer  ${this.token}`
+    })
+  }
+  return this.httpService.deleteService("Notes/DeleteImage/"+id,true,headersOption)
 }
 }

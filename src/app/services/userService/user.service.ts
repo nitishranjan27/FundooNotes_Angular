@@ -25,6 +25,7 @@ export class UserService {
     return this.httpService.postService("User/Login",reqdata,false,header)
   }
   forgot(reqdata:any){
+    console.log(reqdata)
     let header = {
       headers:new HttpHeaders({
         'Content-type':'application/json',

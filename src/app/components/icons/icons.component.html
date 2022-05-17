@@ -3,7 +3,7 @@
     <img class="search_image" style="margin-right: 10px;
       height: 25px;" src="../../../assets/images/add_alert_black_24dp.svg">
     <img class="search_image" style="margin-right: 10px;
-      height: 25px;" src="../../../assets/images/person_add_alt_black_24dp.svg">
+      height: 25px;" src="../../../assets/images/person_add_alt_black_24dp.svg" (click)="openDialog(noteObject)">
     <img class="search_image" style="margin-right: 10px;
       height: 25px;" src="../../../assets/images/palette_black_24dp.svg" [matMenuTriggerFor]="aboveMenu">
        <mat-menu #aboveMenu="matMenu" yPosition="below">
@@ -34,6 +34,7 @@
     <img class="search_image" style="margin-right: 4px;
       height: 25px;" src="../../../assets/images/more_vert_black_24dp.svg" [matMenuTriggerFor]="more">
     <mat-menu #more="matMenu">
+      <button mat-menu-item (click)="onDeleteImage()" >Remove image</button>
       <button mat-menu-item (click)="onDelete()">Delete note</button>
     </mat-menu>
   

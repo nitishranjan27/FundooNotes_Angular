@@ -1,6 +1,7 @@
 import { COMPILER_OPTIONS, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
+import { NoteService } from 'src/app/services/noteservice/note.service';
 import { DataService } from 'src/app/services/DataService/data.service';
 
 @Component({
@@ -10,14 +11,14 @@ import { DataService } from 'src/app/services/DataService/data.service';
 })
 export class DisplaynotesComponent implements OnInit {
   sentmsg: any;
-  searchNote="";
+  searchNote:any;
   @Input() childMessage: any;
   @Output() noteUpdated = new EventEmitter<any>();
   @Output() displaytogetallnotes=new EventEmitter<string>();
-  constructor(public dialog: MatDialog,private data : DataService) { }
+  constructor(public dialog: MatDialog,private data : DataService,private note:NoteService) { }
 
   ngOnInit(): void {
-    console.log(this.childMessage);
+    // console.log(this.childMessage);
     this.data.incomingData.subscribe((res) => {
       console.log("Searching Process",res)
       this.searchNote = res;
@@ -39,6 +40,14 @@ export class DisplaynotesComponent implements OnInit {
     this.sentmsg = $event
     this.displaytogetallnotes.emit(this.sentmsg)
   
+  }
+  onPinned(note:any){
+    note.isPinned = !note.isPinned
+    this.note.notePinned(note.noteId).subscribe((response: any) => {
+       console.log("Note Pinned Successfully",response)
+       this.noteUpdated.emit(response)
+    }) 
+
   }
 
 }
